@@ -1,0 +1,136 @@
+.header {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 5%) 0px 2px 1px -1px,
+        rgb(0 0 0 / 1%) 0px 1px 1px 6px,
+        rgb(0 0 0 / 10%) 0px 1px 3px 0px;
+}
+
+.navbar-brand svg {
+    font-size: 40px;
+}
+
+.navigation-item-wrapper {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.navigation-item {
+    margin: 4px 0 4px 8px;
+    padding: 8px 32px;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+
+.navigation-item:hover {
+    background-color: #f0f2f5;
+    border-radius: 6px;
+}
+
+.active-nav {
+    color: #1b74e4;
+    border-bottom: 3px solid #1b74e4;
+    margin-bottom: -4px;
+}
+
+.active-nav svg {
+    color: #1b74e4 !important;
+}
+
+.active-nav:hover {
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.navigation-item a {
+    text-decoration: none;
+}
+
+.navigation-item svg {
+    font-size: 28px;
+    color: #65676b;
+}
+
+.header-search-wrapper {
+    position: relative;
+}
+
+.header-search-icon {
+    color: #606770;
+    font-size: 15px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+.header-search {
+    background-color: #f0f2f5 !important;
+    border-radius: 50px !important;
+    padding-left: 36px !important;
+}
+
+.header-search:focus {
+    box-shadow: none !important;
+}
+
+.navigation-item-third svg {
+    color: #050505;
+    font-size: 20px;
+}
+
+.navigation-item-third {
+    margin-right: 8px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+
+.user-icon {
+    border-radius: 50%;
+}
+
+.messages,
+.notification {
+    position: relative;
+}
+
+.pill {
+    background-color: #e41e3f;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-pill {
+    background-color: #e41e3f;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.mobile-search {
+    color: #606770 !important;
+    font-size: 18px !important;
+}
