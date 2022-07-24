@@ -1,6 +1,7 @@
 import React from 'react';
 import './MainSection.css';
 import StorySection from '../StorySection/StorySection';
+import WhatsOnYourMind from '../WhatsOnYourMind/WhatsOnYourMind';
 
 const MainSection = () => {
     return (
@@ -11,6 +12,8 @@ const MainSection = () => {
                 </div>
                 <div className="col-md-6">
                     <StorySection />
+                    <WhatsOnYourMind />
+
                 </div>
                 <div className="col-md-3">
 

@@ -1,0 +1,58 @@
+.whats-on-your-mind {
+    padding: 12px 16px 10px 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.post-status-input {
+    height: 40px;
+    padding-left: 16px !important;
+}
+
+.post-status-input::placeholder {
+    font-size: 18px;
+}
+
+.post-status-footer {
+    border-top: solid 1px #e4e6eb;
+    padding-top: 8px;
+    margin-top: 12px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+
+.post-status-footer p {
+    margin-bottom: 0;
+}
+
+.post-status-icon-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.post-status-icon-wrapper:hover {
+    background-color: #f0f2f5;
+    border-radius: 6px;
+}
+
+.live svg {
+    color: #f3425f;
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.photo svg {
+    color: #45bd62;
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.feeling svg {
+    color: #f7b928;
+    margin-right: 8px;
+    font-size: 24px;
+}
