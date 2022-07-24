@@ -1,19 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import { BsFacebook, BsSearch } from 'react-icons/bs';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { FaFacebookMessenger } from 'react-icons/fa';
-import { BiSearch } from 'react-icons/bi';
+import { BiSearch, BiArrowBack } from 'react-icons/bi';
 
 const Header = () => {
+    const [searchClicked, setSearchClicked] = useState(false);
+
+    const handleSearchClick = (e) => {
+        const searchInput = e.target.closest('.header-search');
+        if (!searchInput) {
+            setSearchClicked(false);
+        } else {
+            setSearchClicked(true);
+        }
+    }
+
+    console.log('searchClicked', searchClicked)
     return (
-        <nav className="header">
-            <div className="container-fluid">
+        <nav className="header" onClick={(e) => handleSearchClick(e)}>
+            <div className={`container-fluid ${searchClicked ? 'ps-0' : ''}`}>
                 <div className="d-flex justify-content-between align-items-center">
-                    <div className="first-box d-flex align-items-center">
-                        <a className="navbar-brand me-2" href="/#">
+                    <div className={`first-box d-flex align-items-center ${searchClicked ? 'search-clicked-first-box' : ''}`}>
+                        <a className={`navbar-brand me-2 ${searchClicked ? 'd-none' : ''}`} href="/#">
                             <BsFacebook />
                         </a>
+                        <BiArrowBack onClick={() => setSearchClicked(false)} className={`arrow-icon me-2 ${searchClicked ? 'd-block' : ''}`} />
 
                         <li className="navigation-item-third me-3 d-block d-lg-none">
                             <BiSearch className='mobile-search' />
@@ -24,8 +37,8 @@ const Header = () => {
                         </div>
 
                         <form className="header-search-wrapper d-none d-lg-block">
-                            <input className="header-search form-control me-2 border-0" placeholder="Search Facebook" />
-                            <BsSearch className='header-search-icon' />
+                            <input className={`header-search form-control me-2 border-0 ${searchClicked ? 'pl-10' : ''}`} placeholder="Search Facebook" />
+                            <BsSearch className={`header-search-icon ${searchClicked ? 'icon-hidden' : ''}`} />
                         </form>
                     </div>
 
