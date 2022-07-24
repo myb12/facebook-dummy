@@ -30,8 +30,6 @@ const StorySection = () => {
                 </div>)
             }
 
-
-
             <div className="see-more-story d-none d-md-flex" >
                 <BsArrowRightShort />
                 <div className="position-relative">

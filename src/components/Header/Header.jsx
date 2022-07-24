@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-import { BsFacebook, BsSearch } from 'react-icons/bs';
+import { BsSearch } from 'react-icons/bs';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { FaFacebookMessenger } from 'react-icons/fa';
 import { BiSearch, BiArrowBack } from 'react-icons/bi';
@@ -19,12 +19,22 @@ const Header = () => {
 
     console.log('searchClicked', searchClicked)
     return (
-        <nav className="header" onClick={(e) => handleSearchClick(e)}>
+        <nav className="header fixed-top" onClick={(e) => handleSearchClick(e)}>
             <div className={`container-fluid ${searchClicked ? 'ps-0' : ''}`}>
                 <div className="d-flex justify-content-between align-items-center">
                     <div className={`first-box d-flex align-items-center ${searchClicked ? 'search-clicked-first-box' : ''}`}>
                         <a className={`navbar-brand me-2 ${searchClicked ? 'd-none' : ''}`} href="/#">
-                            <BsFacebook />
+                            {/* <BsFacebook /> */}
+                            <svg viewBox="0 0 36 36" className="a8c37x1j ms05siws l3qrxjdp b7h9ocf4" fill="url(#jsc_s_1r)" height="40" width="40">
+                                <defs>
+                                    <linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="jsc_s_1r">
+                                        <stop offset="0%" stopColor="#0062E0"></stop>
+                                        <stop offset="100%" stopColor="#19AFFF"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"></path>
+                                <path style={{ fill: '#fff' }} d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"></path>
+                            </svg>
                         </a>
                         <BiArrowBack onClick={() => setSearchClicked(false)} className={`arrow-icon me-2 ${searchClicked ? 'd-block' : ''}`} />
 
