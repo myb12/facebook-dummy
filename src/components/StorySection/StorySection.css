@@ -1,0 +1,47 @@
+.story-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 8px;
+    position: relative;
+}
+
+.see-more-story {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #65676b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -20px;
+    top: calc(50% - 20px);
+    z-index: 5;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.see-more-story svg {
+    color: #65676b;
+    font-size: 28px;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: #000000a6;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 22px;
+    left: -65px;
+    font-size: 13px;
+    transition: 0.1s all linear;
+}
+
+.see-more-story:hover .tooltip-text {
+    visibility: visible;
+}
