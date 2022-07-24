@@ -1,0 +1,97 @@
+.room-slider {
+    padding: 12px 16px 10px 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    display: none;
+}
+
+.slick-next {
+    transform: rotate(180deg) translateY(24px) !important;
+    right: 0 !important;
+}
+
+.slick-prev {
+    left: 0 !important;
+}
+
+.slick-next:before {
+    content: '〱' !important;
+}
+
+.slick-prev:before {
+    content: '〱' !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #65676b !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-arrow {
+    height: 48px !important;
+    width: 48px !important;
+    background-color: #fff !important;
+    box-shadow: 0 2px 8px#0000001a, 0 0 0 1px #0000001a;
+    z-index: 5;
+    border-radius: 50%;
+}
+
+.slick-slide {
+    margin-right: 8px;
+}
+
+.slick-slide>div,
+.slick-slide {
+    width: max-content !important;
+}
+
+.slick-disabled {
+    display: none !important;
+}
+
+.create-room {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #e7f3ff;
+    border-radius: 20px;
+    width: 160px;
+    height: 40px;
+    transition: 0.1s all linear;
+    cursor: pointer;
+}
+
+.create-room svg {
+    font-size: 26px;
+    margin-right: 4px;
+    background-image: linear-gradient(to right, #763ee6, #db1a8b);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.create-room span {
+    color: #216fdb;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.create-room:hover {
+    background-color: #f0f2f5;
+}
+
+.slider-item {
+    width: max-content !important;
+}
