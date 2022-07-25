@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PostCard.css';
 import { MdOutlinePublic } from 'react-icons/md';
-import { BsDot } from 'react-icons/bs';
+import { BsDot, BsCamera } from 'react-icons/bs';
+import { FaRegSmile } from 'react-icons/fa';
+import { AiOutlineLike, AiFillLike } from 'react-icons/ai';
+import { RiShareForwardLine, RiArrowDropDownFill, RiChatSmile3Line } from 'react-icons/ri';
 
 const PostCard = () => {
+    const [likeClicked, setLikeCLicked] = useState(false);
+    const [likeHovered, setLikeHovered] = useState(false);
+
+    const handleLike = () => {
+        setLikeCLicked(!likeClicked);
+    }
+
+    const handleLikeHover = (action) => {
+        setTimeout(() => {
+            if (action === 'over') {
+                setLikeHovered(true);
+            } else {
+                setLikeHovered(false);
+            }
+        }, 1000)
+    }
     return (
         <div className="post-card">
             <div className='d-flex align-items-center'>
@@ -45,7 +64,77 @@ const PostCard = () => {
                 </div>
             </div>
 
-        </div>
+            <div className="like-comment-share">
+                <div
+                    className={`like-icon ${likeClicked ? 'like-clicked' : ''}`}
+                    onClick={handleLike}
+                    onMouseOver={() => handleLikeHover('over')}
+                    onMouseLeave={() => handleLikeHover('leave')}
+                >
+                    {
+                        likeClicked ? <AiFillLike /> : <AiOutlineLike />
+                    }
+                    <p>Like</p>
+                </div>
+                <div className="comment-icon">
+                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" strokeLinejoin="round" strokeWidth="32" d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z"></path>
+                    </svg>
+                    <p>Comment</p>
+                </div>
+                <div className="share-icon">
+                    <RiShareForwardLine />
+                    <p>Share</p>
+                </div>
+
+                <div className={`reaction-icons ${likeHovered ? 'reaction-icons-visible' : ''}`}>
+                    <img src="https://i.ibb.co/CVBVrCm/ezgif-com-gif-maker.gif" alt="" />
+                </div>
+            </div>
+
+            <div className='previous-comments'>
+                <p>View 4 previous comments</p>
+                <div className="d-flex">
+                    <p>Most relevant</p>
+                    <RiArrowDropDownFill />
+                </div>
+            </div>
+
+            <div className="comments">
+                <img className="comment-author" src="https://scontent.fcgp17-1.fna.fbcdn.net/v/t39.30808-1/291054612_3179729275598325_8981208490318426981_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeFTQ9c2rnFJYxNf_LFrc6r70f9AupQ67AzR_0C6lDrsDG4I09Re4oM7W42rz6mrclEahokTT_MU1Df-KsY-JbxO&_nc_ohc=TQneNx-X1wcAX90A1ec&_nc_ht=scontent.fcgp17-1.fna&oh=00_AT9VJl168I9iX5Whxq7jZS-GGtdlE7_dAjHgdsPVZ-__kQ&oe=62E3C85D" alt="" />
+                <div>
+                    <div className="specific-comment-wrapper">
+                        <div className="comment-author-name">
+                            <p>MD Hasan</p>
+                        </div>
+                        <div className="specific-comment">
+                            <p>নিয়ে নাও হেইতেরে</p>
+                        </div>
+                    </div>
+                    <div className="little-like-reply">
+                        <p >Like</p>
+                        <p >Reply</p>
+                        <span>19h</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className="write-comment">
+                <img className="comment-author" src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-1/262295709_5351580041524973_229989686152442541_n.jpg?stp=cp0_dst-jpg_p40x40&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeGz5ABa-fKIuG-FuzCLvnMc5yX41LpJrjDnJfjUukmuMI4enOsSteOYtpbbRnCwFld_07k0fKCrUyAqcRKKDI5k&_nc_ohc=nOKUEXRfAZMAX8aidrf&_nc_ht=scontent.fdac138-1.fna&oh=00_AT-U0HuesRJbJ8QrdMKH79knBg5sLCW9xE14wQRzIC74ZQ&oe=62E2E091" alt="" />
+
+                <form className="w-100">
+                    <input className="header-search form-control me-2 border-0 post-status-input write-comment-input" placeholder="Write a comment..." />
+                </form>
+                <div className='write-comment-icons'>
+                    <RiChatSmile3Line className="avatar" />
+                    <FaRegSmile className="smile" />
+                    <BsCamera className="camera" />
+                    <img className="gif" src="https://i.ibb.co/pyVFW6s/gif.png" alt="" />
+                    <img className="sticker" src="https://i.ibb.co/QXdZrVd/sticker-1.png" alt="" />
+                </div>
+            </div>
+
+        </div >
     );
 };
 

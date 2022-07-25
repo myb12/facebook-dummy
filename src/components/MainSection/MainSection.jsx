@@ -12,7 +12,7 @@ const MainSection = () => {
                 <div className="col-lg-3">
 
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 px-0 px-lg-5">
                     <StorySection />
                     <WhatsOnYourMind />
                     <RoomSlider />

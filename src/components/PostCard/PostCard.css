@@ -103,3 +103,232 @@
     color: #65676B;
     font-size: 15px;
 }
+
+.like-comment-share {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e4e6eb;
+    border-bottom: 1px solid #e4e6eb;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    position: relative;
+}
+
+
+.like-comment-share svg {
+    color: #65676b;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.like-comment-share p {
+    color: #65676B;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 0;
+
+}
+
+.like-icon,
+.comment-icon,
+.share-icon {
+    display: flex;
+    align-items: center;
+    padding: 6px 32px;
+    border-radius: 4px;
+    transition: 0.2s all linear;
+    cursor: pointer;
+}
+
+.like-icon:hover,
+.comment-icon:hover,
+.share-icon:hover {
+    background-color: #f0f2f5;
+}
+
+.like-clicked svg {
+    color: #1b74e4;
+    animation: rotate-scale 0.4s ease-in-out;
+}
+
+.like-clicked p {
+    color: #2078F4;
+}
+
+.reaction-icons {
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    top: 0px;
+    visibility: hidden;
+    transition: transform .15s cubic-bezier(.4, 0, .2, 1), -webkit-transform .15s cubic-bezier(.4, 0, .2, 1);
+}
+
+.reaction-icons-visible {
+    transform: translateY(-57px);
+    visibility: visible;
+}
+
+.reaction-icons img {
+    width: 330px;
+    border-radius: 50px;
+}
+
+.previous-comments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.previous-comments p {
+    color: #65676B;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.previous-comments svg {
+    color: #65676B;
+    font-size: 25px;
+}
+
+.comments {
+    display: flex;
+    align-items: center;
+}
+
+.specific-comment-wrapper {
+    padding: 8px 12px;
+    border-radius: 18px;
+    background-color: #f0f2f5;
+}
+
+.comment-author {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.comment-author-name p {
+    text-align: left;
+    margin-bottom: 0;
+    color: #050505;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.specific-comment p {
+    margin-bottom: 0;
+    color: #050505;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.little-like-reply {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.little-like-reply p {
+    margin-right: 16px;
+    color: #65676B;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.little-like-reply span {
+    color: #65676B;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.little-like-reply p:hover,
+.little-like-reply span:hover {
+    text-decoration: underline;
+}
+
+.write-comment {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.write-comment-icons {
+    position: absolute;
+    right: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.write-comment-icons svg,
+.write-comment-icons img {
+    cursor: pointer;
+}
+
+.write-comment svg {
+    color: #65676bad;
+}
+
+.sticker {
+    height: 14px;
+    width: 14px;
+    margin-right: 8px;
+}
+
+.smile {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.gif {
+    margin-right: 8px;
+}
+
+.camera {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.avatar {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.write-comment-input::placeholder {
+    font-size: 15px !important;
+    color: #050505;
+    font-weight: 400;
+}
+
+@keyframes rotate-scale {
+    from {
+        transform: rotate(-15deg) scale(1.05);
+    }
+
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .like-icon,
+    .comment-icon,
+    .share-icon {
+        padding: 6px 20px;
+    }
+}
