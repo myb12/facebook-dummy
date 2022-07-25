@@ -1,0 +1,8 @@
+.main-section {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main-section::-webkit-scrollbar {
+    display: none;
+}

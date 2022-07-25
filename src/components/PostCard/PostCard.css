@@ -191,6 +191,11 @@
     line-height: 20px;
     font-weight: 600;
     margin-bottom: 0;
+    cursor: pointer;
+}
+
+.previous-comments>p:hover {
+    text-decoration: underline;
 }
 
 .previous-comments svg {
@@ -200,7 +205,7 @@
 
 .comments {
     display: flex;
-    align-items: center;
+    margin-top: 8px;
 }
 
 .specific-comment-wrapper {

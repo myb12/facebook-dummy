@@ -1,0 +1,129 @@
+.main-section-left {
+    height: 100vh;
+    overflow: auto;
+    margin-top: -24px;
+    padding: 8px;
+}
+
+/* width */
+.main-section-left::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.main-section-left::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.main-section-left::-webkit-scrollbar-thumb {
+    background: #ced0d4;
+    border-radius: 20px;
+    height: 95vh;
+    visibility: hidden;
+    transition: 0.5s all ease;
+}
+
+.main-section-left:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.left-first {
+    padding-bottom: 8px;
+    border-bottom: solid 1px #d0d0d0;
+}
+
+.left-item,
+.left-item-user {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.2s all linear;
+    cursor: pointer;
+}
+
+.left-item:hover,
+.left-item-user:hover {
+    background-color: #e0e0e0;
+}
+
+.left-item p,
+.left-item-user p {
+    margin-bottom: 0;
+    font-style: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.left-item img {
+    height: 30px;
+    width: 30px;
+
+}
+
+.left-user {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+.left-see-more {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #d3d3d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.shortcuts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.shortcuts a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.shortcuts h5 {
+    color: #65676B;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+.shortcut-edit {
+    visibility: hidden;
+    transition: 0.2s all linear;
+}
+
+.left-footer:hover .shortcut-edit {
+    visibility: visible;
+}
+
+.footer-text {
+    display: flex;
+    margin-top: 8px;
+}
+
+.footer-text small {
+    color: #65676B;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400px;
+    text-align: left;
+}
+
+.footer-text svg {
+    transform: rotate(90deg);
+    color: #65676B;
+    font-size: 13px;
+}
