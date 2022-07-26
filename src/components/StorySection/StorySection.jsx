@@ -15,7 +15,6 @@ const StorySection = () => {
         } else {
             setLength(4);
         }
-        console.log(length)
     }, [isMobile])
 
     return (

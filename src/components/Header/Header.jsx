@@ -16,8 +16,6 @@ const Header = () => {
             setSearchClicked(true);
         }
     }
-
-    console.log('searchClicked', searchClicked)
     return (
         <nav className="header fixed-top" onClick={(e) => handleSearchClick(e)}>
             <div className={`container-fluid ${searchClicked ? 'ps-0' : ''}`}>
