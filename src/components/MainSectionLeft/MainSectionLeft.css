@@ -1,22 +1,23 @@
-.main-section-left {
+.main-section-left-right {
     height: 100vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     margin-top: -24px;
     padding: 8px;
 }
 
 /* width */
-.main-section-left::-webkit-scrollbar {
+.main-section-left-right::-webkit-scrollbar {
     width: 10px;
 }
 
 /* Track */
-.main-section-left::-webkit-scrollbar-track {
+.main-section-left-right::-webkit-scrollbar-track {
     background: transparent;
 }
 
 /* Handle */
-.main-section-left::-webkit-scrollbar-thumb {
+.main-section-left-right::-webkit-scrollbar-thumb {
     background: #ced0d4;
     border-radius: 20px;
     height: 95vh;
@@ -24,17 +25,17 @@
     transition: 0.5s all ease;
 }
 
-.main-section-left:hover::-webkit-scrollbar-thumb {
+.main-section-left-right:hover::-webkit-scrollbar-thumb {
     visibility: visible;
 }
 
-.left-first {
+.left-right-first {
     padding-bottom: 8px;
     border-bottom: solid 1px #d0d0d0;
 }
 
 .left-item,
-.left-item-user {
+.left-right-item-user {
     display: flex;
     align-items: center;
     padding: 8px;
@@ -44,12 +45,12 @@
 }
 
 .left-item:hover,
-.left-item-user:hover {
+.left-right-item-user:hover {
     background-color: #e0e0e0;
 }
 
 .left-item p,
-.left-item-user p {
+.left-right-item-user p {
     margin-bottom: 0;
     font-style: 15px;
     line-height: 20px;
@@ -63,7 +64,7 @@
 
 }
 
-.left-user {
+.left-right-user {
     height: 36px;
     width: 36px;
     border-radius: 50%;

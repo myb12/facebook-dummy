@@ -1,0 +1,42 @@
+.right-section-online {
+    padding-top: 10px;
+    border-top: solid 1px #d0d0d0;
+}
+
+.right-section-wrapper::-webkit-scrollbar-thumb {
+    height: 230px !important;
+}
+
+.contacts {
+    color: #65676B;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.contacts p {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s all linear;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.contact-icon svg {
+    font-size: 18px;
+}
+
+.contact-icon:hover {
+    background-color: #ebebeb;
+}

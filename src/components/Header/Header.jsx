@@ -24,7 +24,6 @@ const Header = () => {
                 <div className="d-flex justify-content-between align-items-center">
                     <div className={`first-box d-flex align-items-center ${searchClicked ? 'search-clicked-first-box' : ''}`}>
                         <a className={`navbar-brand me-2 ${searchClicked ? 'd-none' : ''}`} href="/#">
-                            {/* <BsFacebook /> */}
                             <svg viewBox="0 0 36 36" className="a8c37x1j ms05siws l3qrxjdp b7h9ocf4" fill="url(#jsc_s_1r)" height="40" width="40">
                                 <defs>
                                     <linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="jsc_s_1r">
@@ -38,7 +37,7 @@ const Header = () => {
                         </a>
                         <BiArrowBack onClick={() => setSearchClicked(false)} className={`arrow-icon me-2 ${searchClicked ? 'd-block' : ''}`} />
 
-                        <li className="navigation-item-third me-3 d-block d-lg-none">
+                        <li className="navigation-item-third me-1 me-md-3 d-block d-lg-none">
                             <BiSearch className='mobile-search' />
                         </li>
 

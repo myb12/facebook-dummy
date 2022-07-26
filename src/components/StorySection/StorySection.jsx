@@ -19,7 +19,7 @@ const StorySection = () => {
     }, [isMobile])
 
     return (
-        <div className="story-wrapper">
+        <div className="story-wrapper px-0 px-xl-5">
             <div className="">
                 <MyStoryCard />
             </div>
