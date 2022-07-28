@@ -1,3 +1,21 @@
+# Dummy Facebook app built as a task given by Tier5
+
+## Live-link: https://facebook-dummy.netlify.app/
+## Source code: https://github.com/myb12/facebook-dummy
+
+### To run locally
+* Simply clone the repository. Run "npm install" command.
+* Run "npm start" command.
+
+### Tools used to build this project
+* ReactJs
+* React Hook
+* React Icons
+* Bootstrap
+* CSS 
+* React Slick 
+* beautiful-react-hooks
+
 ## Screenshots of code
 
 ![Screenshot_1](https://i.ibb.co/PFckvd0/Screenshot-1png.png)

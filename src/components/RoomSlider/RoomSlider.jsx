@@ -3,7 +3,6 @@ import './RoomSlider.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { MdVideoCall } from 'react-icons/md';
 
 const RoomSlider = () => {
     var settings = {
