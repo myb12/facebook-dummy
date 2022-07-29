@@ -4,8 +4,10 @@ import { BsSearch } from 'react-icons/bs';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { FaFacebookMessenger } from 'react-icons/fa';
 import { BiSearch, BiArrowBack } from 'react-icons/bi';
+import UseData from '../../hooks/UseData';
 
 const Header = () => {
+    const [user] = UseData();
     const [searchClicked, setSearchClicked] = useState(false);
 
     const handleSearchClick = (e) => {
@@ -98,7 +100,7 @@ const Header = () => {
                                 <div className="pill">3</div>
                             </li>
                             <li className="navigation-item-third position-relative">
-                                <img className="user-icon" src="https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-1/262295709_5351580041524973_229989686152442541_n.jpg?stp=cp0_dst-jpg_p40x40&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeGz5ABa-fKIuG-FuzCLvnMc5yX41LpJrjDnJfjUukmuMI4enOsSteOYtpbbRnCwFld_07k0fKCrUyAqcRKKDI5k&_nc_ohc=nOKUEXRfAZMAX8aidrf&_nc_ht=scontent.fdac138-1.fna&oh=00_AT-U0HuesRJbJ8QrdMKH79knBg5sLCW9xE14wQRzIC74ZQ&oe=62E2E091" alt="" />
+                                <img className="header-user-icon" src={user?.profile_picture} alt="" />
                                 <div className="user-pill"></div>
                             </li>
                         </ul>

@@ -115,7 +115,9 @@
     transition: 0.2s all linear;
 }
 
-.user-icon {
+.header-user-icon {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
 
