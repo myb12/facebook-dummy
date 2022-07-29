@@ -17,7 +17,7 @@ const StorySection = () => {
             setLength(4);
         }
     }, [isMobile])
-    console.log('storyData', storyData)
+
     return (
         <div className="story-wrapper px-0 px-xl-5">
             <div className="">
@@ -25,7 +25,7 @@ const StorySection = () => {
             </div>
 
             {
-                storyData.map((el, i) => <div key={i} >
+                storyData.slice(0, length).map((el, i) => <div key={i} >
                     <OtherStoryCard story={el} />
                 </div>)
             }
