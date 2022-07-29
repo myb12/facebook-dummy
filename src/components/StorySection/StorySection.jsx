@@ -4,6 +4,7 @@ import OtherStoryCard from '../StoryCard/OtherStoryCard';
 import { BsArrowRightShort } from 'react-icons/bs';
 import './StorySection.css';
 import useMediaQuery from 'beautiful-react-hooks/useMediaQuery';
+import { storyData } from '../../fakeData/fakeData';
 
 const StorySection = () => {
     const [length, setLength] = useState(4);
@@ -16,7 +17,7 @@ const StorySection = () => {
             setLength(4);
         }
     }, [isMobile])
-
+    console.log('storyData', storyData)
     return (
         <div className="story-wrapper px-0 px-xl-5">
             <div className="">
@@ -24,8 +25,8 @@ const StorySection = () => {
             </div>
 
             {
-                [...new Array(length)].map((el, i) => <div key={i} className="">
-                    <OtherStoryCard />
+                storyData.map((el, i) => <div key={i} >
+                    <OtherStoryCard story={el} />
                 </div>)
             }
 

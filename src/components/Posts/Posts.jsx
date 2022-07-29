@@ -3,8 +3,8 @@ import PostCard from '../PostCard/PostCard';
 import UseData from '../../hooks/UseData';
 
 const Posts = () => {
-    const [data] = UseData();
-    console.log('posts', data)
+    const [user, data] = UseData();
+
     return (
         <div className='mt-4 px-0 px-lg-5'>
             {

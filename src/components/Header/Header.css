@@ -39,6 +39,7 @@
     padding: 8px 32px;
     cursor: pointer;
     transition: 0.2s all linear;
+    width: 100px;
 }
 
 .navigation-item:hover {
