@@ -88,17 +88,6 @@ export const leftData = [
     },
 ]
 
-/* 
-
-https://i.ibb.co/m8YZbpQ/saved.png
-https://i.ibb.co/FWV4G2w/user.png
-https://i.ibb.co/DDWSDDT/watch.png
-
-https://i.ibb.co/TqRBBgZ/marketplace.png
-https://i.ibb.co/0fKskHr/memories.png
-*/
-
-
 export const onlineData =
     [
         {
